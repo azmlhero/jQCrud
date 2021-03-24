@@ -1,6 +1,6 @@
 $(function(){
 loadRecipies();
-$("#recipes").on("click","btn-danger",handleDelete);
+$("#recipes").on("click",".btn-danger",handleDelete);
 });
 
 
