@@ -1,6 +1,6 @@
 $(function(){
 loadRecipies();
-$("#recipes").on("click"," btn btn-danger",handleDelete);
+$("#recipes").on("click","btn-danger",handleDelete);
 });
 
 
@@ -10,8 +10,12 @@ function handleDelete(){
     let id =parentDiv.attr("data-id");
     console.log(id);
     $.ajax({
-        url:"https://usman-recipes.herokuapp.com/api/recipes"+id,
-        method:"DELETE",
+        url:"https://usman-recipes.herokuapp.com/api/recipes/"+id,
+         method:"DELETE",
+        error: function(response){
+            var recipes = $("#recipes");
+            recipes.append("Error has occured");
+        },
         success: function(){
             loadRecipies(); 
 
