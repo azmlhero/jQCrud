@@ -3,6 +3,9 @@ loadRecipies();
 $("#recipes").on("click",".btn-danger",handleDelete);
 });
 
+function addRecipe(){
+
+}
 
 function handleDelete(){
     var btn= $(this);
