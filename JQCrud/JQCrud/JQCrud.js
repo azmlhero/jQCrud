@@ -13,12 +13,13 @@ function handleDelete(){
         url:"https://usman-recipes.herokuapp.com/api/recipes"+id,
         method:"DELETE",
         success: function(){
-            loadRecipies();
+            loadRecipies(); 
 
         }
     })
     console.log("handle DELETE");
 }
+
 function  loadRecipies(){
     $.ajax({
         url:"https://usman-recipes.herokuapp.com/api/recipes",
