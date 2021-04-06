@@ -53,8 +53,8 @@ function addRecipe(){
         data:{title,body},
         success: function(response){
             console.log(response);
-            $("#title").val();
-            $("#body").val();
+            $("#title").val("");
+            $("#body").val("");
         
             loadRecipies();
         }
