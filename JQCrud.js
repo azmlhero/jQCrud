@@ -4,9 +4,9 @@ $("#recipes").on("click",".btn-danger",handleDelete);
 $("#recipes").on("click",".btn-warning",handleUpdate);
 $("#addBtn").click(addRecipe);
 $("#updateSave").click(function(){
-   var id = $("updateId").val();
-   var title = $("updateTitle").val();
-   var body = $("updateBody").val();
+   var id = $("#updateId").val();
+   var title = $("#updateTitle").val();
+   var body = $("#updateBody").val();
     $.ajax({
     
         url:"https://usman-recipes.herokuapp.com/api/recipes/" +id,
