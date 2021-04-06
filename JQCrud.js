@@ -15,7 +15,7 @@ $("#updateSave").click(function(){
         success:function(response){
             console.log(response);
             loadRecipies(); 
-
+        
             $("#updateModal").modal("hide");
 
         }
@@ -36,7 +36,6 @@ function handleUpdate(){
  
         $("#updateModal").modal("show");
 
-        $("#updateModal").modal("hide");
 
         
 
