@@ -28,11 +28,11 @@ function handleUpdate(){
     var parentDiv = btn.closest(".recipe");
     let id = parentDiv.attr("data-id");
     $.get("https://usman-recipes.herokuapp.com/api/recipes/"+id,function(response){
-        $("updateId").val(response._id);
+        $("#updateId").val(response._id);
         
-        $("updateTitle").val(response.title);
+        $("#updateTitle").val(response.title);
 
-        $("updateBody").val(response.body);
+        $("#updateBody").val(response.body);
  
         $("#updateModal").modal("show");
 
