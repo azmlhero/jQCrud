@@ -53,10 +53,14 @@ function addRecipe(){
         data:{title,body},
         success: function(response){
             console.log(response);
+            // icko jb say set kia add nai ho raha bs console ya network pay hota hay list may nai ho raha hay update ka b masla hay
+            
+
             $("#title").val("");
             $("#body").val("");
         
             loadRecipies();
+            $("#addModal").modal("hide");
         }
     })
 
