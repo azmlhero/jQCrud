@@ -36,6 +36,8 @@ function handleUpdate(){
  
         $("#updateModal").modal("show");
 
+        $("#updateModal").modal("hide");
+
         
 
     } );
