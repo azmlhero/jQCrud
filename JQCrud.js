@@ -12,7 +12,7 @@ $("#updateSave").click(function(){
         url:"https://usman-recipes.herokuapp.com/api/recipes/" +id,
         data:{title,body},
         method:"PUT",
-        success:function (response){
+        success:function(response){
             console.log(response);
             loadRecipies(); 
 
@@ -33,12 +33,12 @@ function handleUpdate(){
         $("updateTitle").val(response.title);
 
         $("updateBody").val(response.body);
-
+ 
         $("#updateModal").modal("show");
 
         
 
-    })
+    });
     
 }
 function addRecipe(){
