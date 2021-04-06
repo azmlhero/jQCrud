@@ -25,8 +25,8 @@ $("#updateSave").click(function(){
 
 function handleUpdate(){
     var btn= $(this);
-    var parentDiv =btn.closest(".recipe");
-    let id =parentDiv.attr("data-id");
+    var parentDiv = btn.closest(".recipe");
+    let id = parentDiv.attr("data-id");
     $.get("https://usman-recipes.herokuapp.com/api/recipes/"+id,function(response){
         $("updateId").val(response._id);
         
@@ -38,7 +38,7 @@ function handleUpdate(){
 
         
 
-    });
+    } );
     
 }
 function addRecipe(){
