@@ -45,6 +45,7 @@ function handleUpdate(){
 function addRecipe(){
     var title=$("#title").val();
     var body = $("#body").val();
+
     
     $.ajax({
         url:"https://usman-recipes.herokuapp.com/api/recipes",
@@ -52,6 +53,9 @@ function addRecipe(){
         data:{title,body},
         success: function(response){
             console.log(response);
+            $("#title").val();
+            $("#body").val();
+        
             loadRecipies();
         }
     })
