@@ -31,10 +31,15 @@ function handleUpdate(){
     function(response){
         $("#updateId").val(response._id);
         
-        $("#updateTitle").val(response.title);
+        $("#updateTitle").val(response.name);
 
-        $("#updateBody").val(response.body);
+        $("#updateBody").val(response.price);
  
+        
+        $("#updateBody").val(response.color);
+        $("#updateBody").val(response.department);
+        
+        $("#updateBody").val(response.description);
         $("#updateModal").modal("show");
 
 
