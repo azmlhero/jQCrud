@@ -9,7 +9,7 @@ $("#updateSave").click(function(){
    var body = $("#updateBody").val();
     $.ajax({
     
-        url:"https://usman-recipes.herokuapp.com/api/products" +id,
+        url:"https://usman-recipes.herokuapp.com/api/products/" +id,
         data:{title,body},
         method:"PUT",
         success:function(response){
@@ -27,7 +27,8 @@ function handleUpdate(){
     var btn= $(this);
     var parentDiv = btn.closest(".recipe");
     let id = parentDiv.attr("data-id");
-    $.get("https://usman-recipes.herokuapp.com/api/products"+id,function(response){
+    $.get("https://usman-recipes.herokuapp.com/api/products/"+id,
+    function(response){
         $("#updateId").val(response._id);
         
         $("#updateTitle").val(response.title);
@@ -48,7 +49,7 @@ function addRecipe(){
 
     
     $.ajax({
-        url:"https://usman-recipes.herokuapp.com/api/products",
+        url:"https://usman-recipes.herokuapp.com/api/products/",
         method:"POST",
         data:{title,body},
         success: function(response){
@@ -72,7 +73,7 @@ function handleDelete(){
     let id =parentDiv.attr("data-id");
     console.log(id);
     $.ajax({
-        url:"https://usman-recipes.herokuapp.com/api/products"+id,
+        url:"https://usman-recipes.herokuapp.com/api/products/"+id,
          method:"DELETE",
         error: function(response){
             var recipes = $("#recipes");
@@ -88,7 +89,7 @@ function handleDelete(){
 
 function  loadRecipies(){
     $.ajax({
-        url:"https://usman-recipes.herokuapp.com/api/products",
+        url:"https://usman-recipes.herokuapp.com/api/products/",
         method:"GET",
         success: function(response){
             console.log(response);
