@@ -2,9 +2,9 @@ $(function(){
 loadRecipies();
 $("#recipes").on("click",".btn-danger",handleDelete);
 $("#recipes").on("click",".btn-warning",handleUpdate);
-$("#addBtn").click(addRecipe);
+$("#btn").click(addRecipe);
 $("#updateSave").click(function(){
-   var id = $("#updateId").val();
+   var name = $("#Name").val();
    var title = $("#updateTitle").val();
    var body = $("#updateBody").val();
     $.ajax({

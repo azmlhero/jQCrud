@@ -29,8 +29,8 @@
     <h1>Restful API Client</h1>
 
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addModal">
-        ADD recipie
+    <button id="btn" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#addModal">
+        ADD Product
     </button>
 
 
@@ -47,23 +47,67 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="form-group">
-                        <label for="title">Title</label>
-                        <input type="text" class="form-control" name="title" id="title" aria-describedby="titleHelp"
+                    <!-- <div class="form-group">
+                        <label for="Name">Name</label>
+                        <input type="text" class="form-control" name="Name" id="Name" aria-describedby="titleHelp"
                             placeholder="Title of the recipe">
                         <small id="titleHelp" class="form-text text-muted">Enter Title of the recipe</small>
                     </div>
+ -->
 
+                    <div class="form-group">
+                        <label for="Name">Name</label>
+                        <input type="text" class="form-control" name="Name" id="Name" aria-describedby="helpId"
+                            placeholder="Name of product ">
+                        <small id="helpId" class="form-text text-muted">Help text</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Price">Price</label>
+                        <input type="text" class="form-control" name="Price" id="Price" aria-describedby="helpId"
+                            placeholder="Price of product">
+                        <small id="helpId" class="form-text text-muted">Help text</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Color">Color</label>
+                        <input type="text" class="form-control" name="Color" id="Color" aria-describedby="helpId"
+                            placeholder="Color Product">
+                        <small id="helpId" class="form-text text-muted">Help text</small>
+                    </div>
+
+
+
+
+
+                    <div class="form-group">
+                        <label for="Department">Department</label>
+                        <input type="text" class="form-control" name="Department" id="Department"
+                            aria-describedby="helpId" placeholder="Department of product">
+                        <small id="helpId" class="form-text text-muted">Help text</small>
+                    </div>
+
+
+
+
+                    <div class="form-group">
+                        <label for="Description">Description</label>
+                        <input type="text" class="form-control" name="Description" id="Description"
+                            aria-describedby="helpId" placeholder="Description of Product">
+                        <small id="helpId" class="form-text text-muted">Help text</small>
+                    </div>
+                    <!-- 
                     <div class="form-group">
                         <label for="body">Body</label>
                         <input type="text" class="form-control" name="body" id="body" aria-describedby="bodyHelp"
                             placeholder=" Recipie Details">
                         <small id="bodyHelp" class="form-text text-muted">Enter Details</small>
-                    </div>
+                    </div> -->
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save</button>
+                    <button id="save" type="button" class="btn btn-primary">Save</button>
                 </div>
             </div>
         </div>
@@ -74,6 +118,12 @@
     <!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#updateModal">
         Launch
     </button> -->
+
+
+
+
+
+
 
     <!-- Modal -->
     <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
@@ -102,10 +152,37 @@
                     <!-- <input type="text" id="updateBody"><br> -->
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
                 </div>
                 <div class="modal-footer">
 
-                    <button id="addBtn" class="btn btn-info">Add Recipie</button>
+                    <button id="btn" class="btn btn-info">Add Recipie</button>
                     <!-- <button id="updateSave" class="btn btn-primary">Update</button> -->
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Save</button>
