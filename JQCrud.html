@@ -3,7 +3,8 @@
 
 <head>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
@@ -36,12 +37,13 @@
 
 
 
+
     <!-- Modal -->
     <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">ADD new recipie</h5>
+                    <h5 class="modal-title">ADD new Product</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -58,22 +60,23 @@
                     <div class="form-group">
                         <label for="Name">Name</label>
                         <input type="text" class="form-control" name="Name" id="Name" aria-describedby="helpId"
-                            placeholder="Name of product ">
-                        <small id="helpId" class="form-text text-muted">Help text</small>
+                            placeholder=" E.g : Name : shirt ">
+
                     </div>
 
                     <div class="form-group">
                         <label for="Price">Price</label>
                         <input type="text" class="form-control" name="Price" id="Price" aria-describedby="helpId"
-                            placeholder="Price of product">
-                        <small id="helpId" class="form-text text-muted">Help text</small>
+                            placeholder=" E.g : Price : 1000$">
+
                     </div>
 
                     <div class="form-group">
+
                         <label for="Color">Color</label>
                         <input type="text" class="form-control" name="Color" id="Color" aria-describedby="helpId"
-                            placeholder="Color Product">
-                        <small id="helpId" class="form-text text-muted">Help text</small>
+                            placeholder=" E.g : Color :orange">
+
                     </div>
 
 
@@ -83,8 +86,8 @@
                     <div class="form-group">
                         <label for="Department">Department</label>
                         <input type="text" class="form-control" name="Department" id="Department"
-                            aria-describedby="helpId" placeholder="Department of product">
-                        <small id="helpId" class="form-text text-muted">Help text</small>
+                            aria-describedby="helpId" placeholder=" E.g : Department: clothing">
+
                     </div>
 
 
@@ -93,8 +96,8 @@
                     <div class="form-group">
                         <label for="Description">Description</label>
                         <input type="text" class="form-control" name="Description" id="Description"
-                            aria-describedby="helpId" placeholder="Description of Product">
-                        <small id="helpId" class="form-text text-muted">Help text</small>
+                            aria-describedby="helpId" placeholder=" E.g : Description : MEN Or Women">
+
                     </div>
                     <!-- 
                     <div class="form-group">
@@ -112,7 +115,7 @@
             </div>
         </div>
     </div>
-    <div id="recipes"> LOading </div>
+    <div id="products"> LOading </div>
 
     <!-- Button trigger modal -->
     <!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#updateModal">
@@ -139,15 +142,39 @@
                 <div class="modal-body">
                     <input type="hidden" id="updateId"><br>
                     <div class="form-group">
-                        <label for="updateTitle">Titlte</label>
-                        <input type="text" class="form-control" name="updateTitle" id="updateTitle"
-                            aria-describedby="updateHelpId" placeholder="updateTitle">
-                        <small id="updateHelpId" class="form-text text-muted">Help text</small>
+                        <label for="updateName">Update Name</label>
+                        <input type="text" class="form-control" name="updateName" id="updateName"
+                            aria-describedby="updateHelpId" placeholder=" E.g : Name : shirt ">
                     </div>
                     <div class="form-group">
-                        <label for="updateBody">Body</label>
-                        <textarea class="form-control" name="updateBody" id="updateBody" rows="3"></textarea>
+                        <label for="updatePrice">Update Price </label>
+                        <input type="text" class="form-control" name="updatePrice" id="updatePrice"
+                            aria-describedby="helpId" placeholder=" E.g : Price : 1000$ ">
+
                     </div>
+
+                    <div class="form-group">
+                        <label for="updateColor">Update Color</label>
+                        <input type="text" class="form-control" name="updateColor" id="updateColor"
+                            aria-describedby="helpId" placeholder="E.g : Color :orange">
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="updateDepartment">Update Department</label>
+                        <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
+                            placeholder="E.g  Department: clothing OR grocerries ">
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="updateDescription">Update Description</label>
+                        <input type="text" class="form-control" name="updateDescription" id="updateDescription"
+                            aria-describedby="helpId" placeholder=" E.g : Description : MEN Or Women">
+
+                    </div>
+
+
                     <!-- <input type="text" id="updateTitle"><br> -->
                     <!-- <input type="text" id="updateBody"><br> -->
 
@@ -157,35 +184,17 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    
                 </div>
                 <div class="modal-footer">
 
-                    <button id="btn" class="btn btn-info">Add Recipie</button>
+
+
+
+
+                    <button id="btn" class="btn btn-info">Add Product </button>
                     <!-- <button id="updateSave" class="btn btn-primary">Update</button> -->
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save</button>
+                    <button id="updateSave" type="button" class="btn btn-primary">Save</button>
                 </div>
             </div>
         </div>
