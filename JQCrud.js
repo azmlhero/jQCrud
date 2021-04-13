@@ -1,9 +1,9 @@
 $(function(){
 loadProducts();
 $("#products").on("click",".btn-danger",handleDelete);
-$("#btn").click(addProduct);
-$("#products").on("click",".btn-warning",handleUpdate);
 
+$("#products").on("click",".btn-warning",handleUpdate);
+$("#btn").click(addProduct);
 $("#save").click(function(){
    var name = $("#Name").val();
    var price = $("#Price").val();
