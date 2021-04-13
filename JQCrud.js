@@ -27,6 +27,7 @@ $("#save").click(function(){
             loadProducts(); 
 
 
+
             
         
             $("#addModal").modal("hide");
@@ -93,31 +94,31 @@ function handleUpdate(){
     
 }
 function addProduct(){
-//       var name = $("#Name").val();
-//    var price = $("#Price").val();
-//    var color = $("#Color").val();
-//    var department = $("#Department").val();
-//    var description =$("#Description").val();
+      var name = $("#Name").val();
+   var price = $("#Price").val();
+   var color = $("#Color").val();
+   var department = $("#Department").val();
+   var description =$("#Description").val();
 
     
-//     $.ajax({
-//         url:"https://usman-recipes.herokuapp.com/api/products/",
-//         method:"POST",
-//         data:{name,price,color,department,description},
-//         success: function(response){
-//             console.log(response);
-//             // icko jb say set kia add nai ho raha bs console ya network pay hota hay list may nai ho raha hay update ka b masla hay
+    $.ajax({
+        url:"https://usman-recipes.herokuapp.com/api/products/",
+        method:"POST",
+        data:{name,price,color,department,description},
+        success: function(response){
+            console.log(response);
+            // icko jb say set kia add nai ho raha bs console ya network pay hota hay list may nai ho raha hay update ka b masla hay
             
-//              $("#Name").val("");
-//             $("#Price").val("");
-//              $("#Color").val("");
-//              $("#Department").val("");
-//             $("#Description").val("");
+             $("#Name").val("");
+            $("#Price").val("");
+             $("#Color").val("");
+             $("#Department").val("");
+            $("#Description").val("");
          
-//             // $("#title").val("");
-//             // $("#body").val("");
+            // $("#title").val("");
+            // $("#body").val("");
         
-//             loadProducts();
+            loadProducts();
             $("#addModal").modal("hide");
         }
   
