@@ -3,8 +3,11 @@ loadProducts();
 $("#products").on("click",".btn-danger",handleDelete);
 
 $("#products").on("click",".btn-warning",handleUpdate);
+// glt nam sayy call kar raha tha jo function hay  uska P capital hay
 $("#btn").click(addProduct);
+
 $("#save").click(function(){
+
    var name = $("#Name").val();
    var price = $("#Price").val();
    var color = $("#Color").val();
@@ -93,7 +96,7 @@ function handleUpdate(){
     } );
     
 }
-function addproduct(){
+function addProduct(){
     $("#addModal").modal("show");
     
 //     }
