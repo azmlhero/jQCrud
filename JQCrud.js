@@ -1,13 +1,13 @@
 $(function(){
 loadProducts();
 $("#products").on("click",".btn-danger",handleDelete);
-$("#btn").click(addProduct);
+ $("#btn").click(addProduct);
 
 $("#products").on("click",".btn-warning",handleUpdate);
 // glt nam sayy call kar raha tha jo function hay  uska P capital hay
 
 $("#save").click(function(){
-
+console.log("here");
    var name = $("#Name").val();
    var price = $("#Price").val();
    var color = $("#Color").val();
@@ -17,7 +17,7 @@ $("#save").click(function(){
 
     $.ajax({
     
-        url:"https://usman-recipes.herokuapp.com/api/products/" +id,
+        url:"https://usman-recipes.herokuapp.com/api/products/" ,
         
         // data:{title,body},
         // method:"PUT",
@@ -96,40 +96,41 @@ function handleUpdate(){
     } );
     
 }
-// function addProduct(){
-//     $("#addModal").modal("show");
+ function addProduct(){
+
+     $("#addModal").modal("show");
     
-//     }
-function addProduct(){
-      var name = $("#Name").val();
-   var price = $("#Price").val();
-   var color = $("#Color").val();
-   var department = $("#Department").val();
-   var description =$("#Description").val();
+     }
+// function addProduct(){
+//       var name = $("#Name").val();
+//    var price = $("#Price").val();
+//    var color = $("#Color").val();
+//    var department = $("#Department").val();
+//    var description =$("#Description").val();
 
     
-    $.ajax({
-        url:"https://usman-recipes.herokuapp.com/api/products/",
-        method:"POST",
-        data:{name,price,color,department,description},
-        success: function(response){
-            console.log(response);
-            // icko jb say set kia add nai ho raha bs console ya network pay hota hay list may nai ho raha hay update ka b masla hay
+//     $.ajax({
+//         url:"https://usman-recipes.herokuapp.com/api/products/",
+//         method:"POST",
+//         data:{name,price,color,department,description},
+//         success: function(response){
+//             console.log(response);
+//             // icko jb say set kia add nai ho raha bs console ya network pay hota hay list may nai ho raha hay update ka b masla hay
             
-            //  $("#Name").val("");
-            // $("#Price").val("");
-            //  $("#Color").val("");
-            //  $("#Department").val("");
-            // $("#Description").val("");
+//             //  $("#Name").val("");
+//             // $("#Price").val("");
+//             //  $("#Color").val("");
+//             //  $("#Department").val("");
+//             // $("#Description").val("");
          
-            // $("#title").val("");
-            // $("#body").val("");
+//             // $("#title").val("");
+//             // $("#body").val("");
         
-            loadProducts();
-            $("#addModal").modal("show");
-        },
-    })
-}
+//             loadProducts();
+//             $("#addModal").modal("show");
+//         },
+//     })
+// }
   
 function handleDelete(){
     var btn= $(this);
